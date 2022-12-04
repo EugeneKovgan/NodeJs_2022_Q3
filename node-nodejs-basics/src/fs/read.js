@@ -1,10 +1,13 @@
 import fs from 'fs';
+import path from 'path';
 import { errorMessage } from './common/errorMessage.js';
+import { getFullPath } from './common/getFullPath.js';
 
 const read = async () => {
-  await fs.readFile('./files/fileToRead.txt', (error, data) => {
+  const { __dirname } = getFullPath(import.meta.url);
+  await fs.readFile(path.join(__dirname, 'files', 'fileToRead.txt'), (error, data) => {
     if (error) {
-      console.log(errorMessage);
+      throw new Error(errorMessage);
     } else {
       console.log(data.toString());
     }
