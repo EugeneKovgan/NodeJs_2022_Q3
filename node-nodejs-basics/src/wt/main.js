@@ -9,8 +9,13 @@ const performCalculations = async () => {
 
   const cp = cpus();
   let countOfCPU = 10;
+  let infoCPU = 0;
+
+  cp.forEach(() => infoCPU++);
+
   console.log(__dirname);
   console.log(pathToFile);
+  console.log(`number cores of CPU: ${infoCPU}`);
 
   const workersRes = await Promise.allSettled(
     cp.map(() => {
