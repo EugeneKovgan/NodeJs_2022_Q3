@@ -5,6 +5,7 @@ import { up } from './up.js';
 import { ls } from './ls.js';
 import { cat } from './cat.js';
 import { add } from './add.js';
+import { cd } from './cd.js';
 // import { compress } from './compress.js';
 // import { decompress } from './decompress.js';
 import { rm } from './rm.js';
