@@ -12,6 +12,8 @@ import { mv } from './mv.js';
 import { cp } from './cp.js';
 import { hash } from './hash.js';
 import { os } from './os.js';
+import { compress } from './compress.js';
+import { decompress } from './decompress.js';
 import { showCurrentPosition } from './common/showCurrentPosition.js';
 import { checkEnterParameters } from './common/checkEnterParameters.js';
 import { checkEnterArguments } from './common/checkEnterArguments.js';
